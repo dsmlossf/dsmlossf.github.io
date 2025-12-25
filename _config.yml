@@ -1,0 +1,48 @@
+# Site
+name: 'GNBG Benchmark'
+description: 'Property-aware benchmark editions (2022–present) for optimization and swarm intelligence.'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: ''  # For GitHub Project Pages set to '/<repo-name>'
+avatar: 'assets/images/sal.jpg'  # Replace with your lab/organizer photo if you want
+disqus: ''  # Optional: your Disqus shortname
+email: 'your-email@university.edu'
+benchmark_repo: 'https://github.com/<org>/<repo>'  # Update this
+benchmark_paper: ''  # Optional: DOI / preprint link
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Pagination
+paginate: 20
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
